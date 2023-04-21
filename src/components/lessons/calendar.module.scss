@@ -1,0 +1,22 @@
+$withSidebar: 17%;
+
+.main{
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  .sidebar{
+    width: $withSidebar;
+    position: fixed;
+
+  }
+  .lesson{
+    margin-left: 10px;
+    width: 99%-$withSidebar;
+    margin-left: $withSidebar+1%;
+  }
+}
+
+.list-group{
+  max-height:300px;
+  overflow-y: scroll;
+}

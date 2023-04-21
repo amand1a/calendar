@@ -1,0 +1,56 @@
+.table{
+  table-layout: fixed;
+  margin-top: 5px;
+}
+.header{
+  background-color: #0000FF ;
+  td{
+    text-align: center;
+    margin-left: 1px;
+    font-size: xx-small;
+    color: aliceblue;
+
+  }
+}
+
+.body{
+  tr{
+    td{
+      font-size: smaller;
+      text-align: center;
+      color: black;
+      border: none;
+      border-radius: 0px;
+    }
+    td:hover{
+      background-color: #d1e0ff;
+    }
+
+  }
+}
+
+.showYears{
+  margin-right: 10px;
+}
+
+.head{
+  display: inline-flex;
+
+  button{
+  }
+}
+
+.calendar{
+  font-size: 10px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+}
+
+.calendar.MorePowerCss{
+
+  button{
+    min-width: 30px;
+  }
+
+}
+

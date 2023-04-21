@@ -1,0 +1,21 @@
+.main {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+}
+.main .sidebar {
+  width: 17%;
+  position: fixed;
+}
+.main .lesson {
+  margin-left: 10px;
+  width: 82%;
+  margin-left: 18%;
+}
+
+.list-group {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+/*# sourceMappingURL=calendar.module.css.map */

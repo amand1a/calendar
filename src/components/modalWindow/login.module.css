@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.sucсessfully {
+  background-color: #bcff5c;
+  color: floralwhite;
+}
+
+.errMessage {
+  font-size: small;
+  color: #ff7373;
+}
+
+.resFromApi {
+  border-radius: 3px;
+  width: auto;
+  background-color: #ff7373;
+  color: white;
+}
+
+/*# sourceMappingURL=login.module.css.map */
