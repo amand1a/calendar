@@ -60,17 +60,24 @@ const Login:FC<Ilogin> = ({setShowLogin}:Ilogin) => {
                                 placeholder="...@gmail.com"
                                 autoFocus
 
+                                isInvalid={errors.email && true}
                             />
+                            <Form.Control.Feedback type="invalid">
+                                {errors.email?.message}
+                            </Form.Control.Feedback>
                         </Form.Group>
-                        {errors.email && <p className={styles.errMessage}>{errors.email.message}</p>}
                         { typeWindow ==="Registration" && <Form.Group  className="mb-3" controlId="exampleForm.ControlInput2">
                             <Form.Label>name</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="name"
                                 {...register("name",)}
+                                isInvalid={errors.name && true}
                             />
-                        </Form.Group> }
+                            <Form.Control.Feedback type="invalid">
+                                {errors.name?.message}
+                            </Form.Control.Feedback>
+                        </Form.Group>}
                         <Form.Group
                             className="mb-3"
                             controlId="exampleForm.ControlTextarea1"
@@ -79,12 +86,18 @@ const Login:FC<Ilogin> = ({setShowLogin}:Ilogin) => {
                             <Form.Control
                                 {...register("password",{minLength:{value:6, message:"min lenght 6"}, required:"password is required"})}
                                 type={"password"}
+                                isInvalid={errors.password && true}
                             />
+                            <Form.Control.Feedback type="invalid">
+
+                                {errors.password?.message}
+
+                            </Form.Control.Feedback>
                         </Form.Group>
-                        {errors.password && <p className={styles.errMessage}>{errors.password.message}</p>}
                         {typeWindow === "Registration"?
                             <Button  variant="primary" onClick={()=>{setTypeWindow("Login")}}>login</Button>:
                             <Button  variant="primary" onClick={()=>{setTypeWindow("Registration")}}>create account</Button>}
+                        <> </>
                         <Button type="submit"  variant="success" >Submit</Button>
                     </Form>
                 </Modal.Body>
